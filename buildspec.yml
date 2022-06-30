@@ -8,7 +8,7 @@ phases:
     commands:
       - echo Build started on `date`
       - echo Compiling the dist folder
-      #- npm run-script build
+      - npm run-script build
       - cd lib
       - zip -r9 ../deployment_package.zip .
       - cd ..
@@ -23,4 +23,4 @@ phases:
 # Include only the files required for your application to run.
 artifacts:
   files:
-      "**/*"
+      - '**/*'
